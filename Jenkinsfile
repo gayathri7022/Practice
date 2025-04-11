@@ -9,12 +9,12 @@ pipeline {
 
         stage ('INSTALL DEPENDENCIES') {
             steps {
-                bat '
+                bat '''
                     "C:\\Users\\mjmnj\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m venv venv
                     call .\\venv\\Scripts\\activate && 
                     pip install --upgrade pip
                     pip install pytest
-                '
+                '''
             }
         }
 
