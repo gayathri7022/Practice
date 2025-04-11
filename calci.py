@@ -17,5 +17,12 @@ def div(a,b):
 if __name__=='__main__':
     print(add(3,4))
 
+    print(sub(6,4))
+
+    print(prod(3,6))
+
+    print(div(8,2))
+    print(div(8,0))
+
     
     
