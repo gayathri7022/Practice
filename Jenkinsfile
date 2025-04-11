@@ -10,7 +10,8 @@ pipeline {
         stage ('INSTALL DEPENDENCIES') {
             steps {
                 bat '''
-                    python -m venv venv
+                    C:\\Users\\mjmnj\\AppData\\Local\\Programs\\Python\\Python313\\python.exe
+                    -m venv venv
                     call .\\venv\\Scripts\\activate && 
                     pip install --upgrade pip
                     pip install pytest
@@ -21,7 +22,7 @@ pipeline {
         stage ('Test') {
             steps {
                 bat '''
-                call venv\\Scripts\\activate
+                call .\\venv\\Scripts\\activate
                 pytest test.py
                 '''
             }
@@ -32,7 +33,7 @@ pipeline {
             steps {
                 echo "Deploying Feature"
                 bat '''
-                call venv\\Scripts\\activate
+                call .\\venv\\Scripts\\activate
                 pyhton calci.py
                 '''
             }
