@@ -11,7 +11,7 @@ pipeline {
             steps {
                 bat '''
                     "C:\\Users\\mjmnj\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m venv venv
-                    call .\\venv\\Scripts\\activate && 
+                    call .\\venv\\Scripts\\activate
                     pip install --upgrade pip
                     pip install pytest
                 '''
