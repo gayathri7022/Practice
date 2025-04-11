@@ -1,7 +1,7 @@
 from calci import add,sub,prod,div
 
 
-def addition():
+def test_cases():
     assert(add(3,4)) == 7
 
 
