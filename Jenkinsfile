@@ -14,16 +14,16 @@ pipeline {
                     call venv\\Scripts\\activate
                     pip install --upgrade pip
                     pip install pytest
-                    '''
+                '''
             }
         }
 
         stage ('Test') {
             steps {
                 bat '''
-                    call venv\\Scripts\\activate
-                    pytest test.py
-                    '''
+                call venv\\Scripts\\activate
+                pytest test.py
+                '''
             }
                 
         }
@@ -32,9 +32,18 @@ pipeline {
             steps {
                 echo "Deploying Feature"
                 bat '''
-                    call venv\\Scripts\\activate
-                    pyhton3 calci.py
-                    '''
+                call venv\\Scripts\\activate
+                pyhton3 calci.py
+                '''
+            }
+        }
+
+        post{
+            success{
+                echo 'pipeline succeeded'
+            }
+            failure{
+                echo 'pipeline failed'
             }
         }
     }
