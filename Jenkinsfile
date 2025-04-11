@@ -33,7 +33,7 @@ pipeline {
                 echo "Deploying Feature"
                 bat '''
                 call .\\venv\\Scripts\\activate
-                pyhton calci.py
+                "C:\\Users\\mjmnj\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" calci.py
                 '''
             }
         }
